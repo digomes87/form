@@ -1,3 +1,11 @@
+<!-- <form action="/users" method="post">
+    First name: <input type="text" name="username"><br>
+    Email: <input type="text" name="email"><br>
+    password: <input type="text" name="password"><br>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" value="Submit">
+</form> -->
+
 <!-- <%= form_tag users_path do |form| %>
     <%= label_tag "Usernamer" %>
     <%= text_field_tag :username %><br>
@@ -18,4 +26,3 @@
 <%= u.text_field :password %><br>
 <%= u.submit %>
 <% end %>
-
