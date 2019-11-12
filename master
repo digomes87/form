@@ -1,0 +1,4 @@
+Updating ba0cb52..5322c50
+Fast-forward
+ app/views/users/new.html.erb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
