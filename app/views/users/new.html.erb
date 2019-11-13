@@ -1,12 +1,21 @@
+<!-- <%= form_tag users_path do |form| %>
+    <%= label_tag "Usernamer" %>
+    <%= text_field_tag :username %><br>
+    <%= label_tag"Email" %>
+    <%= text_field_tag :email %><br>
+    <%= label_tag "Password" %>
+    <%= text_field_tag :password %><br>
+    <%= submit_tag "add user"  %>
+<% end %> -->
+
+
 <%= form_with model: @user do |u| %>
 <%= u.label :username, "Usernamer" %>
-<%= u.text_field :username %><br>
-<%= u.label :email, "Email" %>
-<%= u.text_field :email %><br>
+<%= u.text_field :username%><br>
+<%= u.label :email, "Email"%>
+<%= u.text_field :email, placeholder: "example@example.com"  %><br>
 <%= u.label :password, "Password" %>
 <%= u.text_field :password %><br>
 <%= u.submit %>
 <% end %>
-
-
 
