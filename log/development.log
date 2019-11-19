@@ -8311,3 +8311,266 @@ Processing by ApplicationController#index as HTML
 Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 4521)
 
 
+Started GET "/" for 192.168.88.73 at 2019-11-18 22:32:08 -0500
+Cannot render console from 192.168.88.73! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 5687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 65.7ms | ActiveRecord: 0.8ms | Allocations: 12854)
+
+
+Started GET "/users/22/edit" for 192.168.88.73 at 2019-11-18 22:32:16 -0500
+Cannot render console from 192.168.88.73! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3396)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 8785)
+
+
+Started PATCH "/users/22" for 192.168.88.73 at 2019-11-18 22:32:18 -0500
+Cannot render console from 192.168.88.73! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"1wOVqIi0HCzL4vykpk3IDF8q2qbchRMTQx3+9QKkNDX5fbtm/PuwsT7IGNRavubIZFURWGW6GvpdMOJwaCdeFw==", "user"=>{"username"=>"ggpapuer", "email"=>"gg@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39:in `set_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "ggpapuer"], ["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "ggpapuer"], ["updated_at", "2019-11-19 03:32:18.748013"], ["id", 22]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `update'
+Redirected to http://192.168.88.20:3000/users/22
+Completed 302 Found in 23ms (ActiveRecord: 6.3ms | Allocations: 5546)
+
+
+Started GET "/users/22" for 192.168.88.73 at 2019-11-18 22:32:18 -0500
+Cannot render console from 192.168.88.73! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 123)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 0.1ms | Allocations: 4562)
+
+
+Started GET "/" for 192.168.88.73 at 2019-11-18 22:32:22 -0500
+Cannot render console from 192.168.88.73! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.1ms | Allocations: 4548)
+
+
+Started GET "/users/new" for 192.168.88.73 at 2019-11-18 22:32:23 -0500
+Cannot render console from 192.168.88.73! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1685)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 5680)
+
+
+Started GET "/users/21/edit" for 192.168.88.73 at 2019-11-18 23:05:28 -0500
+Cannot render console from 192.168.88.73! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 5699)
+
+
+Started GET "/users/22/edit" for 192.168.88.73 at 2019-11-18 23:05:30 -0500
+Cannot render console from 192.168.88.73! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:39:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 5666)
+
+
+Started GET "/" for 192.168.3.1 at 2019-11-19 08:36:09 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 5672)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 69.3ms | ActiveRecord: 1.5ms | Allocations: 12509)
+
+
+Started GET "/users/21/edit" for 192.168.3.1 at 2019-11-19 08:36:14 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3396)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 8804)
+
+
+Started GET "/users/22/edit" for 192.168.3.1 at 2019-11-19 08:36:20 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1344)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 5658)
+
+
+Started GET "/users/new" for 192.168.3.1 at 2019-11-19 08:43:39 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1685)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 5640)
+
+
+Started POST "/users" for 192.168.3.1 at 2019-11-19 08:43:53 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as JS
+  Parameters: {"authenticity_token"=>"fjWxJX9N13gR0Er4CQNKa9/nKcsuQdCWLgP/40SdRx6pS3ZQdjbFZtZyiKmAUrIKPDDyQPNmeqXQkiba5YQeQA==", "user"=>{"username"=>"karloapaza", "email"=>"karlo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "karloapaza"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "karloapaza"], ["email", "karlo@gmail.com"], ["password", "karlo123"], ["created_at", "2019-11-19 13:43:53.597720"], ["updated_at", "2019-11-19 13:43:53.597720"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+Redirected to http://192.168.3.15:3000/users/23
+Completed 200 OK in 25ms (ActiveRecord: 8.7ms | Allocations: 4878)
+
+
+Started GET "/users/23" for 192.168.3.1 at 2019-11-19 08:43:53 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 123)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 4550)
+
+
+Started GET "/" for 192.168.3.1 at 2019-11-19 08:43:55 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 814)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 4578)
+
+
+Started GET "/users/23/edit" for 192.168.3.1 at 2019-11-19 08:43:57 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1351)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5668)
+
+
+Started PATCH "/users/23" for 192.168.3.1 at 2019-11-19 08:44:01 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"QRqftb4DIrzK5vLqgcZ8rFmL66O+zr4oQ7pDm2V4Z0xv7NdGbItLiHJ7Y7/UX6DhztPRab1IZo6Y3CNn0ggpsg==", "user"=>{"username"=>"karloapazamerma", "email"=>"karlo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `set_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "karloapazamerma"], ["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "karloapazamerma"], ["updated_at", "2019-11-19 13:44:01.402170"], ["id", 23]]
+  ↳ app/controllers/users_controller.rb:24:in `update'
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:24:in `update'
+Redirected to http://192.168.3.15:3000/users/23
+Completed 302 Found in 28ms (ActiveRecord: 6.5ms | Allocations: 5177)
+
+
+Started GET "/users/23" for 192.168.3.1 at 2019-11-19 08:44:01 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 4304)
+
+
+Started GET "/" for 192.168.3.1 at 2019-11-19 08:44:05 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 791)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 4550)
+
+
+Started GET "/" for 192.168.3.1 at 2019-11-19 08:44:52 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 5892)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 69.3ms | ActiveRecord: 1.4ms | Allocations: 13089)
+
+
+Started GET "/" for 192.168.3.1 at 2019-11-19 08:45:12 -0500
+Cannot render console from 192.168.3.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/application/index.html.erb:6
+  Rendered application/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 985)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 5356)
+
+
