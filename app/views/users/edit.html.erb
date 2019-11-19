@@ -8,14 +8,14 @@
     <%= submit_tag "update user"  %>
 <% end %> -->
 
-<!-- <h1>MODIFI USER => <%= @user.username %></h1>
+<h1>MODIFI USER => <%= @user.username %></h1>
 
 <%= form_for @user do |u| %>
-<%= u.label "Usernamer" %>
+<%= u.label :username %>
 <%= u.text_field :username%><br>
-<%= u.label "Email"%>
+<%= u.label :email %>
 <%= u.text_field :email, placeholder: "example@example.com"  %><br>
-<%= u.label "Password" %>
+<%= u.label :password %>
 <%= u.text_field :password %><br>
 <%= u.submit %>
-<% end %> -->
+<% end %>

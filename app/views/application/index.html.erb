@@ -1,0 +1,11 @@
+<%= link_to  "Create User", new_user_path %>
+
+<h1>User List -> click to modify one</h1>
+
+<ul>
+    <% User.all.each do |user| %>
+    <li>
+        <%= link_to  user.username, edit_user_path(id: user.id) %>    
+    </li>
+    <% end %>
+</ul>

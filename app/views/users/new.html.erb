@@ -17,11 +17,11 @@
 <% end %> -->
 
 <%= form_with model: @user do |u| %>
-<%= u.label :username, "Usernamer" %>
+<%= u.label :username %>
 <%= u.text_field :username%><br>
-<%= u.label :email, "Email"%>
+<%= u.label :email%>
 <%= u.text_field :email, placeholder: "example@example.com"  %><br>
-<%= u.label :password, "Password" %>
+<%= u.label :password %>
 <%= u.text_field :password %><br>
 <%= u.submit %>
 <% end %>
