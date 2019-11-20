@@ -1,20 +1,45 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
+  before_action :set_user, only: %i[update show]
+
   def new
-    @r = User.new
+    @user = User.new
   end
 
   def create
-    @r = User.create(user_params)
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to user_path(id: @user.id)
+    else
+      render :new
+    end
+  end
 
-   if @r
-    redirect_to new_user_path
-   else
-    render :new
-   end
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    if @user.update(user_params)
+      redirect_to user_path(id: @user.id)
+    else
+      redirect_to users_path
+    end
+  end
+
+  def index
+    @users = User.all
   end
 
   private
+
   def user_params
+    # params.permit(:username, :email, :password)
     params.require(:user).permit(:username, :email, :password)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end

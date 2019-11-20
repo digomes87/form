@@ -1,0 +1,20 @@
+linters:
+  rubocop:
+    display_cop_names: true
+files:
+  ignore:
+  ignore:
+    - "bin/*"
+    - "db/*"
+    - "config/**/*"
+    - "config/*"
+    - "Guardfile"
+    - "Rakefile"
+    - "Gemfile.lock"
+    - "test/*"
+    - "node_modules/*"
+    - "app/channels/application_cable/*"
+    - "app/helpers/*"
+    - "app/jobs/*"
+    - "app/mailers/*"
+    - "vendor/*"
